@@ -463,7 +463,7 @@ img {
 
 @media screen and (max-width: 480px) {
     body {
-        background-size: cover;
+        background-size: 480px 520px;
 
     }
 
@@ -479,15 +479,20 @@ img {
         width: 240px;
         height: 400px;
         justify-content: flex-start;
+        opacity: 0.9;
     }
 
     button, p {
-        font-size: 16px;
-        margin: 10px;
+        font-size: 24px;
+        margin: 7px;
     }
 
     button {
-        width: 40px;
+        width: 50px;
+    }
+
+    h1 {
+        font-size: 36px;
     }
 
     .anime1, .anime2 {        
