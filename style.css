@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-image: url('assets/fundo.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    /* overflow: hidden; */
+}
+
+h1 {
+    color: #ff0000;
+    font-size: 48px;
+}
+
+.align-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    gap: 150px;
+}
+
+.x-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.95;
+}
+
+.container {    
+    background-color: #238B96;
+    font-weight: bold;
+    font-size: 24px;        
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 500px;
+    gap: 20px;
+}
+
+button {
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    width: 80px;
+    border: 1px solid #FDFDFD;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+button:hover {
+    opacity: 0.7;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+#rock {
+    background-color: #a200ff;
+}
+
+#paper {
+    background-color: #9ee01a;
+}
+
+#scissors {
+    background-color: #7dbeed;
+}
+
+.result {
+    font-size: 16px;
+    margin-right: 100px;
+}
+
+.wrappper-anime {
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 100px;
+    margin: 50px auto;
+}
+
+.anime1 {  
+    position: relative;       
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-top: 100px;
+    border-radius: 36px 0px;
+    height: 350px;
+    width: 250px;
+    opacity: 0.8; 
+    transform: translateX(-80px) rotate(-5deg);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: rotate(-5deg);
+    background-color: rgb(107, 105, 105);
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.anime2 {  
+    position: relative;       
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-top: 100px;
+    border-radius: 0px 36px;
+    height: 350px;
+    width: 250px;
+    opacity: 0.8; 
+    transform: translateX(80px) rotate(5deg);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: rotate(5deg);
+    background-color: rgb(107, 105, 105);
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+img {
+    height: 350px;
+    width: 250px;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.anime1 span:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, #ff0000);
+    animation: animar1 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animar1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.anime1 span:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #ff0000);
+    animation: animar2 2s linear infinite;
+    animation-delay: 2s;    
+}
+
+@keyframes animar2 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.anime1 span:nth-of-type(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to left, transparent, #ff0000);
+    animation: animar3 2s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes animar3 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.anime1 span:nth-of-type(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #ff0000);
+    animation: animar4 2s linear infinite;
+    animation-delay: 4s;
+}
+
+@keyframes animar4 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.anime2 span:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #F501EC);
+    animation: animar5 2s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes animar5 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.anime2 span:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to left, transparent, #F501EC);
+    animation: animar6 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animar6 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.anime2 span:nth-of-type(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, transparent, #F501EC);
+    animation: animar7 2s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes animar7 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.anime2 span:nth-of-type(4) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #F501EC);
+    animation: animar8 2s linear infinite;
+    animation-delay: 4s;
+}
+
+@keyframes animar8 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .align-container {
+        display: flex;        
+        padding-top: 30px;
+        gap: 80px;
+    }
+
+    .anime1, .anime2 {
+        margin-top: 70px;
+    }
+
+    .container {
+        height: 450px;
+        width: 350px;
+    }    
+
+    img {
+        width: 350px;
+        height: 400px;
+    }
+    
+}
+
+@media screen and (max-width: 1025px) {    
+    .align-container {
+        gap: 40px;
+    }
+
+}
+
+@media screen and (max-width: 960px) {    
+    body {
+        background-size: 960px 620px;
+        
+    }
+    
+    .align-container {
+        gap: 20px;
+    }
+
+    .anime1, .anime2 {
+        width: 200px;
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    .align-container {                              
+        padding-top: 10px;
+        margin: 0 auto;
+        gap: 10px;
+        height: 610px;
+        width: 580px;
+        align-items: flex-start;
+    }
+
+    .container {
+        justify-content: flex-start;
+        padding-top: 20px;
+        height: 330px;
+        width: 300px;
+        gap: 5px;
+    }
+
+    .anime1, .anime2 {
+        align-self: self-end;
+        height: 200px;
+        width: 150px;        
+    }
+
+    img {
+        height: 200px;
+        width: 150px;
+    }
+    
+    .anime1 {
+        border-radius: 15px;
+        left: 150px;
+        bottom: 20px;
+        margin-top: 0;
+    }
+
+    .anime2 {
+        border-radius: 15px;
+        right: 150px;
+        bottom: 20px;
+        margin-top: 0;
+    }    
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    body {
+        background-size: 760px 620px;
+    }
+    
+    .align-container {                                     
+        padding-top: 10px;        
+        height: 610px;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+
+    .container {        
+        padding-top: 20px;
+        height: 330px; 
+        justify-content: flex-start;      
+    }
+
+    .anime1, .anime2 {             
+        height: 200px;
+        width: 150px; 
+        align-self: self-end;       
+    }
+
+    img {
+        height: 200px;
+        width: 150px;
+    }
+    
+    .anime1 {
+        border-radius: 10px;        
+        bottom: 10px;
+        margin-top: 0;
+        left: 150px;
+        right: 0;
+                             
+    }
+
+    .anime2 {
+        border-radius: 10px;        
+        bottom: 10px;
+        margin-top: 0;        
+        right: 150px;               
+    }    
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-size: cover;
+
+    }
+
+    .align-container {
+        padding: 15px;
+        width: 360px;
+        height: 520px; 
+        margin: 0 auto;       
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 240px;
+        height: 400px;
+        justify-content: flex-start;
+    }
+
+    button, p {
+        font-size: 16px;
+        margin: 10px;
+    }
+
+    button {
+        width: 40px;
+    }
+
+    .anime1, .anime2 {        
+        display: none;
+    }
+    
+}
