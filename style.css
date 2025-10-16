@@ -348,7 +348,7 @@ img {
 
 @media screen and (max-width: 960px) {    
     body {
-        background-size: 960px 620px;
+        background-size: 960px 840px;
         
     }
     
@@ -413,7 +413,7 @@ img {
 
 @media screen and (max-width: 670px) {
     body {
-        background-size: 760px 620px;
+        background-size: 720px 760px;
     }
     
     .align-container {                                     
@@ -463,7 +463,7 @@ img {
 
 @media screen and (max-width: 480px) {
     body {
-        background-size: 480px 620px;
+        background-size: 670px 620px;
 
     }
 
